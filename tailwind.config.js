@@ -1,29 +1,21 @@
+import daisyui from "daisyui";
+
 module.exports = {
   mode: "jit",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  plugins: [require("daisyui")],
-
-  // daisyUI config (optional - here are the default values)
+  plugins: [daisyui],
   daisyui: {
     themes: [
       {
         mytheme: {
           primary: "#16a34a",
-
           secondary: "#fca5a5",
-
           accent: "#fde047",
-
           neutral: "#115e59",
-
           "base-100": "#ffffff",
-
           info: "#3abff8",
-
           success: "#36d399",
-
           warning: "#fbbd23",
-
           error: "#f87272",
         },
       },

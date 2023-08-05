@@ -1,4 +1,4 @@
-import './App.css'
+import '../src/assets/css/App.css'
 import { Form } from './components/form'
 
 function App() {
