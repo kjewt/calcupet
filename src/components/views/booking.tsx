@@ -1,6 +1,11 @@
+import { useState } from 'react';
+import { Input } from '../common/Input';
 import { MdContentCopy } from 'react-icons/md';
 export const Booking = () => {
 
+    const [state, setState] = useState('')
+    const [emailValue, setEmailValue] = useState('')
+    if ("00000" === state) { setEmailValue('sdasdfs') }
     return (
 
         <>
@@ -15,6 +20,7 @@ export const Booking = () => {
                             <button className="btn btn-primary btn-outline my-1 w-1/2 text-[0.7rem]">문의하기</button>
                         </div>
                     </figure>
+
                     <div className="text-left rounded-xl w-full shadow-md p-8">
                         <p className="font-medium text-base tracking-tight">파란 인베스트먼트</p>
                         {/* <p className="font-medium text-sm">파란 인베스트먼트</p> */}
@@ -30,7 +36,16 @@ export const Booking = () => {
             <div className="m-8">
                 <div className="text-left rounded-xl w-full shadow-md p-8">
                     <div className='text-primary text-base font-bold'> Options</div>
-
+                    <Input onInputChange={(e) => { setState(e.target.value) }} />
+                    <div>비번: {state}</div>
+                    <Input
+                        width=''
+                        inputLabel={'이메일'}
+                        placeholder={'Email'}
+                        type={'email'}
+                    // onChange={(e) => setEmailValue(e.target.value)} // 상위 컴포넌트의 상태를 업데이트하는 함수를 넣어주세요
+                    />
+                    <div>이메일 : {emailValue}</div>
 
                     <hr className="my-4" />
                     <button className="btn w-52 my-4">중간크기</button>
