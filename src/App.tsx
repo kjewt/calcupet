@@ -1,11 +1,14 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../src/assets/css/App.css'
-import { Form } from './components/form'
-import { Nav } from './components/Nav'
+import { Nav } from './components/nav'
 import { Title } from './components/title'
-import { Booking } from './components/views/booking';
-import { AddOffice } from './components/views/addOffice';
+
+import { Weight } from './pages/weight';
+import { Age } from './pages/age';
+import { Water } from './pages/water';
+import { Feed } from './pages/feed';
+import { Budget } from './pages/budget';
 
 const queryClient = new QueryClient()
 
@@ -14,23 +17,16 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Nav />
         <BrowserRouter>
+          <Nav />
           <section>
             <Title />
             <Routes>
-              <Route path="/" element={<Form />} />
-              <Route path="/booking" element={<Booking />} />
-              <Route path="/addOffice" element={<AddOffice width="w-60" />} />
-
-              {/* <Route path="/join" element={<Join />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/add" element={<AddAcount />} />
-            <Route path="/complete" element={<TransferComplete />} />
-            <Route path="/keypad" element={<Keypad />} />
-            <Route path="/detail" element={<TransactionDetail />} />
-            <Route path="/not-a-user" element={<NotAUser />} />
-            <Route path="/*" element={<Navigate to="/" />} /> */}
+              <Route path="/" element={<Weight />} />
+              <Route path="/feed" element={<Feed />} />
+              <Route path="/water" element={<Water />} />
+              <Route path="/age" element={<Age />} />
+              <Route path="/budget" element={<Budget />} />
             </Routes>
           </section>
 

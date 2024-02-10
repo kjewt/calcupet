@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import { AiFillStar } from 'react-icons/ai';
-import { API_test } from "./API/ApiTest";
 
 export const Form = () => {
 
@@ -11,7 +10,6 @@ export const Form = () => {
                 <button type="submit" className="btn btn-primary">등록</button>
             </form>
             <div className="flex flex-col gap-2 p-20">
-                <API_test />
                 <Link to="/booking" className="btn btn-primary">예약페이지</Link>
                 <Link to="/addOffice" className="btn btn-primary  btn-outline">오피스추가</Link>
             </div>
