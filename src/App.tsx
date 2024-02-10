@@ -1,8 +1,8 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../src/assets/css/App.css'
-import { Nav } from './components/nav'
-import { Title } from './components/title'
+import { Nav } from './components/common/nav'
+import { Title } from './components/common/title'
 
 import { Weight } from './pages/weight';
 import { Age } from './pages/age';

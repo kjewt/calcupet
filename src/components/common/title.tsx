@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { pageInfo } from "../static/pageInfo";
-import type { PageInfoType } from "../type/types";
+import { pageInfo } from "../../static/pageInfo";
+import type { PageInfoType } from "../../type/types";
 
 export const Title = () => {
     const data: PageInfoType[] = pageInfo;
